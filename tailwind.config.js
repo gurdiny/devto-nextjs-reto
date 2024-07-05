@@ -10,6 +10,10 @@ module.exports = {
       fontFamily: {
         sans: ["Open Sans", "sans-serif"],
       },
+      gridTemplateColumns: {
+        // Definir un grid layout personalizado
+        "custom-layout": "240px 2fr 1fr",
+      },
     },
   },
   plugins: [],

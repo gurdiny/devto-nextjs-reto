@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import { Toaster } from "sonner";
 
 export default function Document() {
   return (
@@ -9,7 +10,7 @@ export default function Document() {
           rel="stylesheet"
         />
       </Head>
-      <body className="bg-[#F5F5F5]">
+      <body className="bg-[#F5F5F5] ">
         <Main />
         <NextScript />
       </body>

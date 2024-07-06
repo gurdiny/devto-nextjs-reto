@@ -64,14 +64,14 @@ export default function Home() {
             </p>
             <div className="flex flex-col mt-4 gap-2">
               <button className="text-[#3B49DF] p-[7px_15px] border-[#3B49DF] border-[1px] rounded  hover:bg-[#3B49DF] hover:text-white hover:underline">
-                <a href="" className="font-medium">
+                <Link href="" className="font-medium">
                   Create Acount
-                </a>
+                </Link>
               </button>
               <button className="hidden md:flex  p-[7px_15px] md:justify-center rounded hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
-                <a href="" className="font-medium">
+                <Link href="" className="font-medium">
                   Log In
-                </a>
+                </Link>
               </button>
             </div>
           </div>
@@ -182,51 +182,51 @@ export default function Home() {
           </nav>
 
           <div className="flex flex-row px-4">
-            <a className="p-2" href="">
+            <Link className="p-2" href="">
               <TwitterIcon />
-            </a>
-            <a className="p-2" href="">
+            </Link>
+            <Link className="p-2" href="">
               <FacebookIcon />
-            </a>
-            <a className="p-2" href="">
+            </Link>
+            <Link className="p-2" href="">
               <GitHubIcon />
-            </a>
-            <a className="p-2" href="">
+            </Link>
+            <Link className="p-2" href="">
               <InstagramIcon />
-            </a>
-            <a className="p-2" href="">
+            </Link>
+            <Link className="p-2" href="">
               <TwitchIcon />
-            </a>
-            <a className="p-2" href="">
+            </Link>
+            <Link className="p-2" href="">
               <MIcon />
-            </a>
+            </Link>
           </div>
           <nav className="">
             <h3 className="font-bold px-2">Popular Tags</h3>
             <ul className="flex flex-col max-h-[42vh] overflow-y-auto">
               <li className="flex gap-1 py-2 px-4 rounded-md hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
-                <a href="">#webdev</a>
+                <Link href="">#webdev</Link>
               </li>
               <li className="flex gap-1 py-2 px-4 rounded-md hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
-                <a href="">#webdev</a>
+                <Link href="">#webdev</Link>
               </li>
               <li className="flex gap-1 py-2 px-4 rounded-md hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
-                <a href="">#webdev</a>
+                <Link href="">#webdev</Link>
               </li>
               <li className="flex gap-1 py-2 px-4 rounded-md hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
-                <a href="">#webdev</a>
+                <Link href="">#webdev</Link>
               </li>
               <li className="flex gap-1 py-2 px-4 rounded-md hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
-                <a href="">#webdev</a>
+                <Link href="">#webdev</Link>
               </li>
               <li className="flex gap-1 py-2 px-4 rounded-md hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
-                <a href="">#webdev</a>
+                <Link href="">#webdev</Link>
               </li>
               <li className="flex gap-1 py-2 px-4 rounded-md hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
-                <a href="">#webdev</a>
+                <Link href="">#webdev</Link>
               </li>
               <li className="flex gap-1 py-2 px-4 rounded-md hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
-                <a href="">#webdev</a>
+                <Link href="">#webdev</Link>
               </li>
             </ul>
           </nav>
@@ -267,24 +267,24 @@ export default function Home() {
         <div className="flex flex-col">
           <div className="flex">
             <nav className="flex flex-row my-2">
-              <a
+              <Link
                 className="p-[12px_8px] font-semibold hover:bg-white hover:text-[#3B49DF] rounded"
                 href=""
               >
                 Relevant
-              </a>
-              <a
+              </Link>
+              <Link
                 className="p-[12px_8px] font-semibold  hover:bg-white hover:text-[#3B49DF] rounded"
                 href=""
               >
                 Latest
-              </a>
-              <a
+              </Link>
+              <Link
                 className="p-[12px_8px] font-semibold  hover:bg-white hover:text-[#3B49DF] rounded"
                 href=""
               >
                 Top
-              </a>
+              </Link>
             </nav>
           </div>
           <div className="flex flex-col gap-4">
@@ -294,13 +294,13 @@ export default function Home() {
                   className="bg-white rounded-lg"
                   key={`post-${post._id}`}
                 >
-                  <a href={`/post/${post._id}`}>
+                  <Link href={`/post/${post._id}`}>
                     <Image
                       src="https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fcte9o9ck2zu6adselby1.png"
                       width={1200}
                       height={630}
                     />
-                  </a>
+                  </Link>
                   <div>
                     <div className="flex flex-col p-4 gap-4">
                       <div className="flex flex-row items-center gap-2">
@@ -313,20 +313,20 @@ export default function Home() {
                           />
                         </div>
                         <div className="flex flex-col">
-                          <a
+                          <Link
                             href={`/post/${post._id}`}
                             className="text-[14px] font-semibold"
                           >
                             {post.user.name}
-                          </a>
-                          <a href="" className="text-[12px]">
+                          </Link>
+                          <Link href="" className="text-[12px]">
                             {Date(post.user.createdAt)}
-                          </a>
+                          </Link>
                         </div>
                       </div>
                       <div>
                         <h3 className="font-bold text-[20px]">
-                          <a href={`/post/${post._id}`}>{post.name}</a>
+                          <Link href={`/post/${post._id}`}>{post.name}</Link>
                         </h3>
                         <ul className="flex flex-row gap-2 text-sm">
                           <li className="hover:bg-[#55276523] rounded-md p-1">

@@ -3,6 +3,7 @@ import clsx from "clsx";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { getPost } from "@/api";
+import Link from "next/link";
 export default function Header() {
   const [token, setToken] = useState(null);
 
@@ -16,19 +17,19 @@ export default function Header() {
         <div className="p-4 md:hidden">
           <IconBurger />
         </div>
-        <a href="/">
+        <Link href="/">
           <Image
             src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
             width={50}
             height={40}
           />
-        </a>
+        </Link>
         <div className="hidden md:flex border-[2px] border-[#D4D4D4] rounded p-[1px] mx-[16px] max-w-[680px]">
           <form action="">
             <div className="flex flex-row gap-2">
-              <a href="" className="p-1 ">
+              <Link href="" className="p-1 ">
                 <SearchIcon />
-              </a>
+              </Link>
               <input
                 id="search-input"
                 class="pr-[142px] w-full text-[#D4D4D4]"
@@ -42,23 +43,23 @@ export default function Header() {
           </form>
         </div>
         <div className="flex flex-row  items-center ml-auto">
-          <a href="" className="p-1 md:hidden">
+          <Link href="" className="p-1 md:hidden">
             <SearchIcon />
-          </a>
+          </Link>
           <div
             className={clsx("flex flex-row", {
               hidden: !!token,
             })}
           >
             <button className="hidden md:flex p-[7px_15px] rounded m-2 hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
-              <a href="/login" className="font-medium">
+              <Link href="/login" className="font-medium">
                 Log In
-              </a>
+              </Link>
             </button>
             <button className="text-[#3B49DF] p-[7px_15px] border-[#3B49DF] border-[1px] rounded m-2 hover:bg-[#3B49DF] hover:text-white hover:underline">
-              <a href="/signup" className="font-semibold">
+              <Link href="/signup" className="font-semibold">
                 Create account
-              </a>
+              </Link>
             </button>
           </div>
           <div
@@ -67,9 +68,9 @@ export default function Header() {
             })}
           >
             <button className="hidden md:flex p-[7px_15px] rounded m-2 hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
-              <a href="/create-post" className="font-medium">
+              <Link href="/create-post" className="font-medium">
                 Create Post
-              </a>
+              </Link>
             </button>
             <div className="flex items-center">
               <Image

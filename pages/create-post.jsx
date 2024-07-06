@@ -4,6 +4,7 @@ import { createPost } from "@/api";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function CreatePost() {
   const router = useRouter();
@@ -47,14 +48,14 @@ export default function CreatePost() {
   return (
     <main className="grid min-h-screen grid-cols-custom-layout gap-4 p-4 grid-flow-row m-auto max-w-[1380px] ">
       <div className="hidden md:flex justify-end">
-        <a href="/">
+        <Link href="/">
           <Image
             src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
             width={50}
             height={40}
             className="mb-4"
           />
-        </a>
+        </Link>
       </div>
       <div className="flex flex-col">
         <div className="flex gap-4 justify-between h-14 items-center">

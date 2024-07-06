@@ -45,14 +45,14 @@ export default function Login() {
     <main className="flex flex-col min-h-screen align-middle items-center justify-center p-2 lg:p-4 lg:gap-4 w-full bg-white">
       <section className="md:w-[640px] p-8">
         <div className="flex flex-col items-center gap-4 bg-white ">
-          <a href="/">
+          <Link href="/">
             <Image
               src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
               width={50}
               height={40}
               className="mb-4"
             />
-          </a>
+          </Link>
           <h1 className="font-bold text-3xl text-center">
             Join the DEV Community
           </h1>
@@ -61,42 +61,60 @@ export default function Login() {
           </p>
         </div>
         <div className="w-full mt-12">
-          <a className="grid grid-cols-10 mt-4 p-4 border rounded-lg" href="">
+          <Link
+            className="grid grid-cols-10 mt-4 p-4 border rounded-lg"
+            href=""
+          >
             <p className="col-span-1">
               <TwitterIcon />
             </p>
             <p className="col-span-9 text-center"> Continue with Apple</p>
-          </a>
-          <a className="grid grid-cols-10 mt-4 p-4 border rounded-lg" href="">
+          </Link>
+          <Link
+            className="grid grid-cols-10 mt-4 p-4 border rounded-lg"
+            href=""
+          >
             <p className="col-span-1">
               <FacebookIcon />
             </p>
             <p className="col-span-9 text-center"> Continue with Facebook</p>
-          </a>
-          <a className="grid grid-cols-10 mt-4 p-4 border rounded-lg" href="">
+          </Link>
+          <Link
+            className="grid grid-cols-10 mt-4 p-4 border rounded-lg"
+            href=""
+          >
             <p className="col-span-1">
               <GitHubIcon />
             </p>
             <p className="col-span-9 text-center"> Continue with GitHub</p>
-          </a>
-          <a className="grid grid-cols-10 mt-4 p-4 border rounded-lg" href="">
+          </Link>
+          <Link
+            className="grid grid-cols-10 mt-4 p-4 border rounded-lg"
+            href=""
+          >
             <p className="col-span-1">
               <InstagramIcon />
             </p>
             <p className="col-span-9 text-center"> Continue with Instagram</p>
-          </a>
-          <a className="grid grid-cols-10 mt-4 p-4 border rounded-lg" href="">
+          </Link>
+          <Link
+            className="grid grid-cols-10 mt-4 p-4 border rounded-lg"
+            href=""
+          >
             <p className="col-span-1">
               <TwitchIcon />
             </p>
             <p className="col-span-9 text-center"> Continue with Twitch</p>
-          </a>
-          <a className="grid grid-cols-10 mt-4 p-4 border rounded-lg" href="">
+          </Link>
+          <Link
+            className="grid grid-cols-10 mt-4 p-4 border rounded-lg"
+            href=""
+          >
             <p className="col-span-1">
               <MIcon />
             </p>
             <p className="col-span-9 text-center"> Continue with Fosstodon</p>
-          </a>
+          </Link>
         </div>
         <div className="my-8">
           <p className="text-center">OR</p>
@@ -138,15 +156,15 @@ export default function Login() {
           <div className="my-8 ">
             <p className="italic text-sm text-center mb-4 px-12">
               By signing in, you are agreeing to our
-              <a href="" className="text-[#3B49DF]">
+              <Link href="" className="text-[#3B49DF]">
                 {" "}
                 privacy policy, terms of use
-              </a>{" "}
+              </Link>{" "}
               and
-              <a href="" className="text-[#3B49DF]">
+              <Link href="" className="text-[#3B49DF]">
                 {" "}
                 code of conduct
-              </a>
+              </Link>
               .
             </p>
             <hr />

@@ -89,8 +89,8 @@ export default function SinglePost({ id }) {
           <div className="flex">
             <article className="bg-white rounded-xl">
               <Image
-                src="https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fcte9o9ck2zu6adselby1.png"
-                width={1200}
+                src={posts.user.image}
+                width={800}
                 height={630}
                 className="rounded-md"
               />

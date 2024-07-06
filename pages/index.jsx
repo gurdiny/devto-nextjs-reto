@@ -11,7 +11,7 @@ import {
   TwitchIcon,
   MIcon,
   PodcastIcon,
-  videosIcon,
+  VideosIcon,
   TagsIcon,
   LigthIcon,
   BagsIcon,
@@ -23,7 +23,7 @@ import {
   GuidesIcon,
   SofwareIcon,
 } from "@/components/Icons";
-import { getPost } from "@/api";
+import { getPost, deletePost } from "@/api";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -40,6 +40,16 @@ export default function Home() {
         console.error("[getAllProducts error]", error);
       });
   }, []);
+
+  // const handleDelete = async () => {
+  //   try {
+  //     const deletedPost = await deletePost(posts.id);
+  //     console.log("Post eliminado:", deletedPost);
+  //     // Aquí puedes actualizar el estado o hacer algo después de eliminar el post
+  //   } catch (error) {
+  //     console.error("Error al eliminar el post:", error);
+  //   }
+  // };
   return (
     <Layout>
       <main className="grid min-h-screen grid-cols-custom-layout gap-4 p-4 grid-flow-row m-auto max-w-[1380px]">
@@ -75,76 +85,76 @@ export default function Home() {
               </li>
               <li className="flex gap-1 py-2 px-4 rounded-md hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
                 <span className="">
-                  <HouseIcon />
+                  <PodcastIcon />
                 </span>
                 <span className="">Home</span>
               </li>
               <li className="flex gap-1 py-2 px-4 rounded-md hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
                 <span className="">
-                  <HouseIcon />
+                  <VideosIcon />
                 </span>
                 <span className="">Home</span>
               </li>
               <li className="flex gap-1 py-2 px-4 rounded-md hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
                 <span className="">
-                  <HouseIcon />
+                  <TagsIcon />
                 </span>
                 <span className="">Home</span>
               </li>
               <li className="flex gap-1 py-2 px-4 rounded-md hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
                 <span className="">
-                  <HouseIcon />
+                  <LigthIcon />
+                </span>
+                <span className="">Home</span>
+              </li>
+              {/* <li className="flex gap-1 py-2 px-4 rounded-md hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
+                <span className="">
+                  <BagsIcon />
                 </span>
                 <span className="">Home</span>
               </li>
               <li className="flex gap-1 py-2 px-4 rounded-md hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
                 <span className="">
-                  <HouseIcon />
+                  <HeartColoIcon />
                 </span>
                 <span className="">Home</span>
               </li>
               <li className="flex gap-1 py-2 px-4 rounded-md hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
                 <span className="">
-                  <HouseIcon />
+                  <CupIcon />
                 </span>
                 <span className="">Home</span>
               </li>
               <li className="flex gap-1 py-2 px-4 rounded-md hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
                 <span className="">
-                  <HouseIcon />
+                  <SparksIcon />
                 </span>
                 <span className="">Home</span>
               </li>
               <li className="flex gap-1 py-2 px-4 rounded-md hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
                 <span className="">
-                  <HouseIcon />
+                  <ContactIcon />
                 </span>
                 <span className="">Home</span>
               </li>
               <li className="flex gap-1 py-2 px-4 rounded-md hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
                 <span className="">
-                  <HouseIcon />
+                  <DevToIcon />
                 </span>
                 <span className="">Home</span>
               </li>
               <li className="flex gap-1 py-2 px-4 rounded-md hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
                 <span className="">
-                  <HouseIcon />
+                  <GuidesIcon />
                 </span>
                 <span className="">Home</span>
-              </li>
-              <li className="flex gap-1 py-2 px-4 rounded-md hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
+              </li> */}
+              {/* <li className="flex gap-1 py-2 px-4 rounded-md hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
                 <span className="">
-                  <HouseIcon />
+                  <SofwareIcon />
                 </span>
                 <span className="">Home</span>
-              </li>
-              <li className="flex gap-1 py-2 px-4 rounded-md hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
-                <span className="">
-                  <HouseIcon />
-                </span>
-                <span className="">Home</span>
-              </li>
+              </li> */}
             </ul>
           </nav>
           <nav>
@@ -386,6 +396,7 @@ export default function Home() {
                           <div>
                             <SaveIcon />
                           </div>
+                          {/* <button onClick={handleDelete}>🧨Delete</button> */}
                         </div>
                       </div>
                     </div>

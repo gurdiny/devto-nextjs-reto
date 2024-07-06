@@ -1,6 +1,15 @@
 import { IconBurger, SearchIcon } from "./Icons";
+import clsx from "clsx";
 import Image from "next/image";
+import { useState, useEffect } from "react";
+import { getPost } from "@/api";
 export default function Header() {
+  const [token, setToken] = useState(null);
+
+  useEffect(() => {
+    const storedToken = localStorage.getItem("token");
+    setToken(storedToken);
+  }, []);
   return (
     <header className="shadow bg-white sticky top-0 z-10">
       <nav className="flex flex-row items-center md:p-[0_8px] lg:p-[0_16px] m-auto max-w-[1380px]">
@@ -36,17 +45,40 @@ export default function Header() {
           <a href="" className="p-1 md:hidden">
             <SearchIcon />
           </a>
-          <div className="flex flex-row">
-            <button className="hidden md:flex  p-[7px_15px]  rounded m-2 hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
+          <div
+            className={clsx("flex flex-row", {
+              hidden: !!token,
+            })}
+          >
+            <button className="hidden md:flex p-[7px_15px] rounded m-2 hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
               <a href="/login" className="font-medium">
                 Log In
               </a>
             </button>
             <button className="text-[#3B49DF] p-[7px_15px] border-[#3B49DF] border-[1px] rounded m-2 hover:bg-[#3B49DF] hover:text-white hover:underline">
-              <a href="/singup" className="font-semibold">
-                Create acount
+              <a href="/signup" className="font-semibold">
+                Create account
               </a>
             </button>
+          </div>
+          <div
+            className={clsx("flex flex-row", {
+              hidden: !token,
+            })}
+          >
+            <button className="hidden md:flex p-[7px_15px] rounded m-2 hover:bg-[#EBECFC] hover:text-[#3B49DF] hover:underline">
+              <a href="/create-post" className="font-medium">
+                Create Post
+              </a>
+            </button>
+            <div className="flex items-center">
+              <Image
+                className="rounded-full w-[100%]"
+                src="https://i.pravatar.cc/70"
+                width={70}
+                height={70}
+              />
+            </div>
           </div>
         </div>
       </nav>

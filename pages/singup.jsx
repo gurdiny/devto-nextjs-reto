@@ -23,7 +23,7 @@ export default function SingUp() {
   } = useForm();
 
   async function onSubmit(data) {
-    // console.log("onSubmit");
+    console.log("onSubmit");
     try {
       const user = await createUser(
         data.email,

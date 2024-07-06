@@ -15,6 +15,7 @@ export default function CreatePost() {
   } = useForm();
 
   async function onSubmit(data) {
+    console.log("Onsubmit");
     try {
       const post = await createPost(
         data.name,
@@ -24,6 +25,7 @@ export default function CreatePost() {
       );
       if (post) {
         toast.success("Post registrado");
+        router.push("/");
       } else {
         toast.error("Error en el registro");
         setError("root.serverError", {
@@ -136,9 +138,9 @@ export default function CreatePost() {
               >
                 Publish
               </button>
-              <button className="w-[20%] p-2 rounded-lg text-gray">
+              {/* <button className="w-[20%] p-2 rounded-lg text-gray">
                 Save Draft
-              </button>
+              </button> */}
             </div>
             {errors.root && errors.root.serverError && (
               <span className="text-red-600">

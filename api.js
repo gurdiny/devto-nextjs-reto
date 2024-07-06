@@ -80,6 +80,11 @@ export async function createUser(email, password, name, profilePic) {
 }
 
 export async function createPost(name, image, body, user) {
+  const token = localStorage.getItem("token");
+  if (!token) {
+    throw new Error("No se encontró el token de autenticación");
+  }
+
   const response = await fetch(`${API_URL}/post`, {
     method: "POST",
     headers: {
@@ -95,6 +100,30 @@ export async function createPost(name, image, body, user) {
   });
 
   const json = await response.json();
-
+  console.log(json);
   return json.data.post;
+}
+
+export async function deletePost(id) {
+  const token = localStorage.getItem("token");
+  if (!token) {
+    throw new Error("No se encontró el token de autenticación");
+  }
+
+  const response = await fetch(`${API_URL}/post/${id}`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: token,
+    },
+  });
+
+  if (!response.ok) {
+    const errorMessage = await response.text();
+    throw new Error(`Error al eliminar el post: ${errorMessage}`);
+  }
+
+  const json = await response.json();
+  console.log(json);
+  return json.data.posts;
 }

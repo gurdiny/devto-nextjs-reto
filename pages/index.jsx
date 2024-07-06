@@ -59,7 +59,7 @@ export default function Home() {
               DEV Community is a community of 1,681,640 amazing developers
             </h2>
             <p>
-              We're a place where coders share, stay up-to-date and grow their
+              Were a place where coders share, stay up-to-date and grow their
               careers.
             </p>
             <div className="flex flex-col mt-4 gap-2">
@@ -244,7 +244,7 @@ export default function Home() {
               <span className="underline text-[#3B49DF]"> dark mode.</span>
             </h2>
             <p>
-              We're a place where coders share, stay up-to-date and grow their
+              Were a place where coders share, stay up-to-date and grow their
               careers.
             </p>
           </div>

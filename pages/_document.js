@@ -1,6 +1,7 @@
 // pages/_document.js
 
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import { Toaster } from "sonner";
 
 export default class MyDocument extends Document {
   render() {
@@ -16,7 +17,7 @@ export default class MyDocument extends Document {
         <body className="bg-[#F5F5F5]">
           <Main />
           <NextScript />
-          <Toaster />{" "}
+          <Toaster />
           {/* Por ejemplo, aquí puedes incluir componentes globales como Toaster */}
         </body>
       </Html>

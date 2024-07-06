@@ -10,6 +10,7 @@ import { useRouter } from "next/router";
 import { getIdPost } from "@/api";
 import { toast } from "sonner";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 export default function SinglePost({ id }) {
   // const router = useRouter();
   // const { id } = router.query;
@@ -105,12 +106,12 @@ export default function SinglePost({ id }) {
                     />
                   </div>
                   <div className="flex flex-col">
-                    <a href="" className="text-[14px] font-semibold">
+                    <Link href="" className="text-[14px] font-semibold">
                       {posts.user.name}
-                    </a>
-                    <a href="" className="text-[12px]">
+                    </Link>
+                    <Link href="" className="text-[12px]">
                       {Date(posts.createdAt)}
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="flex flex-row gap-2 ">
@@ -224,12 +225,12 @@ export default function SinglePost({ id }) {
                     />
                   </div>
                   <div className="flex flex-col">
-                    <a href="" className="text-[14px] font-semibold">
+                    <Link href="" className="text-[14px] font-semibold">
                       {posts.user.name}
-                    </a>
-                    <a href="" className="text-[12px]">
+                    </Link>
+                    <Link href="" className="text-[12px]">
                       {Date(posts.user.createdAt)}
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div>
@@ -270,15 +271,15 @@ export default function SinglePost({ id }) {
                   </p>
                 </div>
                 <div className="flex flex-col">
-                  <a className="p-4 border-b-[.5px] border-gray-100" href="">
+                  <Link className="p-4 border-b-[.5px] border-gray-100" href="">
                     window.ai - running AI LOCALLY from DevTools!
-                  </a>
-                  <a className="p-4 border-b-[.5px] border-gray-100" href="">
+                  </Link>
+                  <Link className="p-4 border-b-[.5px] border-gray-100" href="">
                     window.ai - running AI LOCALLY from DevTools!
-                  </a>
-                  <a className="p-4 border-b-[.5px] border-gray-100" href="">
+                  </Link>
+                  <Link className="p-4 border-b-[.5px] border-gray-100" href="">
                     window.ai - running AI LOCALLY from DevTools!
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="p-4 bg-white rounded md:max-h-[60vh] md:overflow-y-auto lg:max-h-none shadow-sm ">

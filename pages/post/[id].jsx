@@ -296,8 +296,8 @@ export default function SinglePost({ id }) {
                   <span className="underline text-[#3B49DF]"> dark mode.</span>
                 </h2>
                 <p>
-                  We're a place where coders share, stay up-to-date and grow
-                  their careers.
+                  We&apos;s re a place where coders share, stay up-to-date and
+                  grow their careers.
                 </p>
               </div>
             </div>
